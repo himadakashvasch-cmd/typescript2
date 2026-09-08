@@ -13,4 +13,13 @@
  * 2. Determine the most appropriate data type for each variable.
  * 3. Create the variable declarations using TypeScript.
  * 4. Display the student data using console.log.
- */
+ */ 
+const studentName: string = "Nadia Putri";
+const studentID: string = "ST2026045";
+const assignmentScore: number = 88.5;
+const final: number = 91.5;
+
+console.log(studentName)
+console.log(studentID)
+console.log(assignmentScore)
+console.log(final)

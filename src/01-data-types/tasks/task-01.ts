@@ -17,9 +17,15 @@
 const studentName: string = "Nadia Putri";
 const studentID: string = "ST2026045";
 const assignmentScore: number = 88.5;
-const final: number = 91.5;
+const midtermScore: number = 84;
+const finalScore: number = 91.5;
+const attendanceScore: number = 100;
+const extracurricularActivities: boolean = true;
 
-console.log(studentName)
-console.log(studentID)
-console.log(assignmentScore)
-console.log(final)
+console.log("Student Name: ", studentName);
+console.log("Student ID: ", studentID);
+console.log("Assignment Score: ", assignmentScore);
+console.log("Midterm Score: ", midtermScore);
+console.log("Final Score: ", finalScore);
+console.log("Attendance Score: ", attendanceScore)
+console.log("Extracurricular Activities: ", extracurricularActivities);

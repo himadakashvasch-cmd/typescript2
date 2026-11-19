@@ -7,14 +7,32 @@
  * - Display the names of absent students.
  * - Calculate the attendance percentage.
  */
-
 const attendances = [
-  { name: "Alya", present: true },
-  { name: "Budi", present: true },
-  { name: "Citra", present: false },
-  { name: "Dimas", present: true },
-  { name: "Eka", present: false },
-  { name: "Fajar", present: true },
-  { name: "Gita", present: true },
-  { name: "Hana", present: false }
-];
+    { name: "Alya", present: true },
+    { name: "Budi", present: true },
+    { name: "Citra", present: false },
+    { name: "Dimas", present: true },
+    { name: "Eka", present: false },
+    { name: "Fajar", present: true },
+    { name: "Gita", present: true },
+    { name: "Hana", present: false }
+]
+let presentCount: number = 0
+let absentCount: number = 0
+let absentStudents: string[] = []
+
+for (let i: number = 0; i < attendances.length; i++) {
+    if (attendances[i].present === true) {
+        presentCount = presentCount + 1
+    } else {
+        absentCount = absentCount + 1
+        absentStudents.push(attendances[i].name)
+    }
+}
+
+const attendancePercentage: number = (presentCount / attendances.length) * 100
+
+console.log(`Number of Present Students: ` + presentCount)
+console.log(`Number of Absent Students: ` + absentCount)
+console.log(`Names of Absent Students: ` + absentStudents.join(", "))
+console.log(`Attendance Percentage: ` + attendancePercentage.toFixed(2) + "%")

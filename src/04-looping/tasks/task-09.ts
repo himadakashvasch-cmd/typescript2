@@ -17,12 +17,48 @@
  */
 
 const students = [
-    { name: "Alya", score: 88 },
-    { name: "Budi", score: 71 },
-    { name: "Citra", score: 95 },
-    { name: "Dimas", score: 63 },
-    { name: "Eka", score: 84 },
-    { name: "Fajar", score: 79 },
-    { name: "Gita", score: 92 },
-    { name: "Hana", score: 67 }
-];
+  { name: "Alya", score: 88 },
+  { name: "Budi", score: 71 },
+  { name: "Citra", score: 95 },
+  { name: "Dimas", score: 63 },
+  { name: "Eka", score: 84 },
+  { name: "Fajar", score: 79 },
+  { name: "Gita", score: 92 },
+  { name: "Hana", score: 67 }
+]
+let aCount: number = 0
+let bCount: number = 0
+let cCount: number = 0
+let dCount: number = 0
+let highestScore: number = students[0].score
+let lowestScore: number = students[0].score
+let finalScore: number = 0
+
+for (let i: number = 0; i < students.length; i++) {
+  totalScore = finalScore + students[i].score
+  if (students[i].score >= 90) {
+    aCount = aCount + 1
+  } else if (students[i].score >= 80) {
+    bCount = bCount + 1
+  } else if (students[i].score >= 70) {
+    cCount = cCount + 1
+  } else {
+    dCount = dCount + 1
+  }
+  if (students[i].score > highestScore) {
+    highestScore = students[i].score
+  }
+  if (students[i].score < lowestScore) {
+    lowestScore = students[i].score
+  }
+}
+
+const averageScore: number = finalScore / students.length
+
+console.log("Number of A Students: " + aCount)
+console.log("Number of B Students: " + bCount)
+console.log("Number of C Students: " + cCount)
+console.log("Number of D Students: " + dCount)
+console.log("Highest Score: " + highestScore)
+console.log("Lowest Score: " + lowestScore)
+console.log("Average Score: " + averageScore.toFixed(2))

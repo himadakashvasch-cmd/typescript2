@@ -13,7 +13,9 @@
  * 3. Determine the correct data type.
  * 4. Declare all variables in TypeScript.
  * 5. Display the product data using console.log.
- */const productName: string = "Mechanical Kerboard RGB";
+ */
+
+const productName: string = "Mechanical Kerboard RGB";
 const productCode: string = "KBR-001";
 const originalPrice: number = 850000;
 const discountPercentage: number = 25;

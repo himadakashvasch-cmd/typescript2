@@ -11,10 +11,21 @@
  * | Information   | Value        |
  * | ------------- | ------------ |
  * | Customer Name | Raka Saputra |
- * | Monthly Usage | 124 GB       |
+ * | Monthly Usage | 124 GB       |          
  * 
  * Tasks:
  * 1. Declare all variables.
  * 2. Implement the business rules using if...else if...else.
  * 3. Display the recommended package.
  */
+const customerName : string = "Raka Saputra"    
+const monthlyUsage : number = 124 // GB
+const recomendedPackage : string = "";
+
+if(monthlyUsage < 50){
+    console.log(`recomendedPackage = "Basic"`)
+}else if (monthlyUsage >= 50 && monthlyUsage <= 150){
+    console.log(`recomendPackage = "Standart"`)
+}else {(monthlyUsage > 150 )
+    console.log('recomendPackage = "Premium"')
+}
